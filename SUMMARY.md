@@ -1,3 +1,4 @@
 # Table of contents
 
-* [HTB - Keeper machine](README.md)
+* [Keeper ](README.md)
+* [CozyHosting](cozyhosting.md)
