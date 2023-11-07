@@ -1,4 +1,4 @@
-# SPL Power
+# SPL 1.1
 
 ## Using Transforming Commands for Visualizations
 
@@ -134,4 +134,6 @@ The minimum span that can be used is 1800 seconds, or 30 minutes.&#x20;
 minspan=30m or minspan=1800
 {% endhint %}
 
-[https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart](https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart)
+{% embed url="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart" %}
+
+> Summary indexes uses sichart and sitimechart for accelerating the data from the summary index.&#x20;
