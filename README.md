@@ -24,6 +24,18 @@ Each time you invoke the `chart` command, you can use one or more functions. How
 
 Sparklines are inline charts that appear within table cells in search results and display time-based trends associated with the primary key of each row.
 
+
+
+{% hint style="info" %}
+Sparkline can be used with chart and stats command.
+
+example:&#x20;
+
+\| chart sparkline count by host
+
+\| stats sparkline sum by host&#x20;
+{% endhint %}
+
 1. Span-length&#x20;
 2. Sparkline-func\
 
@@ -44,6 +56,8 @@ Sparklines are inline charts that appear within table cells in search results an
 {% hint style="info" %}
 The size of the sparkline is defined by settings in the `limits.conf` file. The `sparkline_maxsize` setting defines the maximum number of elements to emit for a sparkline.
 {% endhint %}
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 #### Span options
 
