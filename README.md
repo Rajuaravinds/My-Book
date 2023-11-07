@@ -68,8 +68,12 @@ Timechart options
 | usenull     | true    |
 | useother    | true    |
 
-#### &#x20;Clause
+#### &#x20;Clause usage
 
 ####
+
+1. BY
+2. OVER
+3. WHERE
 
 ####
