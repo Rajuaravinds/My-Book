@@ -6,7 +6,7 @@
 
 2. TimeChart Command
 
-### Chart Command
+### 1. Chart Command
 
 The `chart` command is a [transforming command](https://docs.splunk.com/Splexicon:Transformingcommand) that returns your results in a table format. The results can then be used to display the data as a chart, such as a column, line, area, or pie chart.
 
@@ -76,16 +76,62 @@ Timechart options
 
 | Tc options  | Default |
 | ----------- | ------- |
-| bin options | -       |
+| bin options | 300     |
 | nullstr     | NULL    |
 | otherstr    | OTHER   |
 | usenull     | true    |
 | useother    | true    |
 
-#### &#x20;Clause usage
+&#x20;
+
+{% hint style="info" %}
+the search uses the `useother=f` argument to exclude events that don't match.
+
+`usenull=f` argument to exclude fields that don't have a value.
+{% endhint %}
+
+#### Clause usage
 
 1. BY
 2. OVER
 3. WHERE
 
-####
+Align the time bins to 5am (local time). Set the span to 12h. The bins will represent 5am - 5pm, then 5pm - 5am (the next day), and so on.
+
+`...| chart count BY _time span=12h aligntime=@d+5h`
+
+[https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Chart#chart](https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Chart#chart)
+
+### 2. Timechart Command
+
+The `timechart` command is a [transforming command](https://docs.splunk.com/Splexicon:Transformingcommand).&#x20;
+
+The `timechart` command accepts either the `bins` argument OR the `span` argument. If you specify both `bins` and `span`, `span` is used. The `bins` argument is ignored.
+
+
+
+{% hint style="info" %}
+If you do not specify either `bins` or `span`, the `timechart` command uses the default `bins=100`.
+{% endhint %}
+
+#### Default time spans
+
+If you use the predefined time ranges in the time range picker, and do not specify the `span` argument, the following table shows the default span that is used.
+
+| Time range      | Default span |
+| --------------- | ------------ |
+| Last 15 minutes | 10 seconds   |
+| Last 60 minutes | 1 minute     |
+| Last 4 hours    | 5 minutes    |
+| Last 24 hours   | 30 minutes   |
+| Last 7 days     | 1 day        |
+| Last 30 days    | 1 day        |
+| Previous year   | 1 month      |
+
+{% hint style="info" %}
+The minimum span that can be used is 1800 seconds, or 30 minutes.&#x20;
+
+minspan=30m or minspan=1800
+{% endhint %}
+
+[https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart](https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart)
