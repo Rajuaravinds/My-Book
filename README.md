@@ -2,9 +2,9 @@
 
 ## Using Transforming Commands for Visualizations
 
-&#x20; 1\.  Chart Command&#x20;
+&#x20; 1\.  Chart Command   -  <mark style="color:green;">Transforming Command</mark>
 
-2. TimeChart Command
+2. TimeChart Command. - <mark style="color:green;">Transforming Command</mark>
 
 ### 1. Chart Command
 
@@ -100,7 +100,7 @@ Align the time bins to 5am (local time). Set the span to 12h. The bins will repr
 
 `...| chart count BY _time span=12h aligntime=@d+5h`
 
-[https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Chart#chart](https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Chart#chart)
+{% embed url="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Chart#chart" %}
 
 ### 2. Timechart Command
 
@@ -137,3 +137,9 @@ minspan=30m or minspan=1800
 {% embed url="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/Timechart" %}
 
 > Summary indexes uses sichart and sitimechart for accelerating the data from the summary index.&#x20;
+
+{% embed url="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2308/SearchReference/CommonStatsFunctions" %}
+
+{% embed url="https://docs.splunk.com/Documentation/Splunk/9.1.1/SearchReference/Sichart" %}
+
+{% embed url="https://docs.splunk.com/Documentation/Splunk/9.1.1/SearchReference/Sitimechart" %}
