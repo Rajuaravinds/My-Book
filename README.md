@@ -44,3 +44,32 @@ Sparklines are inline charts that appear within table cells in search results an
 {% hint style="info" %}
 The size of the sparkline is defined by settings in the `limits.conf` file. The `sparkline_maxsize` setting defines the maximum number of elements to emit for a sparkline.
 {% endhint %}
+
+#### Span options
+
+| Time scale    | Syntax                                | Description                                                                                |
+| ------------- | ------------------------------------- | ------------------------------------------------------------------------------------------ |
+| \<sec>        | s \| sec \| secs \| second \| seconds | Time scale in seconds.                                                                     |
+| \<min>        | m \| min \| mins \| minute \| minutes | Time scale in minutes.                                                                     |
+| \<hr>         | h \| hr \| hrs \| hour \| hours       | Time scale in hours.                                                                       |
+| \<day>        | d \| day \| days                      | Time scale in days.                                                                        |
+| \<month>      | mon \| month \| months                | Time scale in months.                                                                      |
+| \<subseconds> | us \| ms \| cs \| ds                  | Time scale in microseconds (us), milliseconds (ms), centiseconds (cs), or deciseconds (ds) |
+
+Timechart options
+
+
+
+| Tc options  | Default |
+| ----------- | ------- |
+| bin options | -       |
+| nullstr     | NULL    |
+| otherstr    | OTHER   |
+| usenull     | true    |
+| useother    | true    |
+
+#### &#x20;Clause
+
+####
+
+####
